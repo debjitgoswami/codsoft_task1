@@ -1,0 +1,386 @@
+/* Reset box-sizing for all elements */
+* {
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+body {
+  color: white;
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: rgb(21, 20, 20);
+  animation: slideIn 1s ease forwards;
+  opacity: 0;
+}
+
+/* Slide-in animation */
+@keyframes slideIn {
+  0% {
+    transform: translateY(-50px);
+    opacity: 0;
+  }
+
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+/* Logo styling */
+.logo {
+  padding: 2px;
+  font-family: cursive;
+  margin-left: 18px;
+  margin-right: 5px;
+  border: 1px solid rgb(122, 118, 118);
+  border-radius: 50%;
+}
+
+/* Navigation bar */
+nav {
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+}
+
+nav ul {
+  display: flex;
+  list-style: none;
+  padding: 0 12px;
+}
+
+nav ul li a {
+  color: white;
+  text-decoration: none;
+  padding: 0 5px;
+}
+
+/* Navbar container */
+.navbar {
+  font-size: 12px;
+  align-items: center;
+  border-radius: 25px;
+  border: 3px solid rgb(63, 61, 61);
+  box-shadow: rgba(244, 242, 242, 0.12) 0px 2px 4px 0px,
+    rgba(255, 255, 255, 0.32) 0px 2px 16px 0px;
+  box-shadow: rgba(244, 242, 242, 0.121) 0px 2px 4px 0px,
+    rgba(255, 255, 255, 0.189) 0px 2px 16px 0px inset;
+}
+
+/* Button styling */
+.accbtn {
+  color: white;
+  border: none;
+  margin-right: 12px;
+  background-color: rgb(21, 20, 20);
+  border: 1px solid rgb(95, 93, 93);
+  border-radius: 25px;
+  padding: 10px 20px;
+  cursor: pointer;
+}
+
+/* Navbar hover effect */
+.navbar a:hover,
+.accbtn:hover {
+  text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 40px #88c4e6, 0 0 60px #9bcbe8;
+  transition: text-shadow 0.5s ease-in-out;
+}
+
+/* Content area */
+.content {
+  margin: 10px;
+  padding: 10px;
+  border-radius: 12px;
+  background-image: url(img/back10.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  min-height: 100vh;
+  animation: slideIn 1s ease forwards;
+  box-shadow: rgba(245, 243, 243, 0.35) 0px 5px 15px inset;
+}
+
+/* Welcome page styles */
+.welcomepage {
+  text-align: center;
+  margin: 120px 2px 0px 2px;
+}
+
+.welcomepage h1 {
+  padding: 2px;
+  font-family: cursive;
+  font-size: 69px;
+  letter-spacing: 8px;
+  position: relative;
+  animation: text 3s 1;
+}
+
+.quotes {
+  font-family: "Courier New", Courier, monospace;
+  white-space: nowrap;
+  overflow: hidden;
+  display: inline-block;
+  position: relative;
+  font-size: 18px;
+  width: 57ch;
+
+  animation: typing 4s steps(40, end), blink-caret 0.75s step-end infinite;
+}
+
+.quotes::after {
+  content: "|";
+  position: absolute;
+  right: 0;
+  animation: blink-caret 0.75s step-end infinite;
+}
+
+@keyframes typing {
+  from {
+    width: 0;
+  }
+
+  to {
+    width: 57ch;
+  }
+}
+
+@keyframes blink-caret {
+  from,
+  to {
+    border-color: transparent;
+  }
+
+  50% {
+    border-color: black;
+  }
+}
+
+@keyframes text {
+  0% {
+    color: black;
+  }
+
+  30% {
+    letter-spacing: 15px;
+  }
+
+  85% {
+    letter-spacing: 8px;
+  }
+}
+
+/* Welcome page hover effect */
+.welcomepage h1:hover {
+  text-shadow: 0 0 4px #fff, 0 0 20px #fff, 0 0 40px #88c4e6, 0 0 60px #9bcbe8;
+  transition: text-shadow 0.5s ease-in-out;
+}
+
+.bodybtn {
+  display: flex;
+  justify-content: center;
+  cursor: pointer;
+
+  padding-bottom: 230px;
+}
+
+.btn1,
+.btn2 {
+  border: none;
+  border-radius: 25px;
+  padding: 10px 20px;
+  cursor: pointer;
+  background-color: rgb(21, 20, 20);
+  color: white;
+  margin-right: 20px;
+}
+
+.btn2 {
+  background-color: rgb(255, 255, 255);
+  color: rgb(0, 0, 0);
+}
+
+.btn1:hover,
+.btn2:hover {
+  text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 40px #88c4e6, 0 0 60px #9bcbe8;
+  transition: text-shadow 0.5s ease-in-out;
+}
+
+.about {
+  margin: 74px 0 50px 0;
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+}
+.about p {
+  font-size: 15px;
+}
+
+.about h2 {
+  margin-bottom: 10px;
+}
+
+.about div {
+  padding-left: 127px;
+}
+
+/* Section hover effects */
+.about h2:hover,
+.learnbox h2:hover {
+  color: rgb(0, 0, 0);
+  text-decoration: underline;
+  text-shadow: 0 0 4px #ffffff16, 0 0 20px #fff, 0 0 40px #fbfbfb,
+    0 0 60px #eff1f3;
+  transition: color 0.2s ease-in-out, text-shadow 0.5s ease-in-out;
+}
+
+/* the stats ..grid */
+
+.grid-container {
+  display: grid;
+  gap: 10px;
+  padding: 10px;
+}
+
+.grid-item {
+  background: rgba(255, 255, 255, 0.17);
+  border-radius: 16px;
+  box-shadow: 0 4px 30px rgba(255, 254, 254, 0.1);
+  backdrop-filter: blur(4.9px);
+  -webkit-backdrop-filter: blur(4.9px);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  text-align: center;
+  padding: 20px;
+  font-size: 30px;
+}
+.grid-item:hover {
+  box-shadow: rgba(255, 255, 255, 0.35) 0px 5px 15px;
+}
+
+.item1 {
+  grid-area: 1 / 1 / 4 / 5;
+
+  display: flex;
+  flex-direction: row;
+
+  justify-content: space-evenly;
+}
+
+.item2 {
+  grid-area: 1 / 5 / 5 / 7;
+}
+
+.item3 {
+  grid-area: 4 / 1 / 7 / 3;
+}
+
+.item4 {
+  grid-area: 5 / 3 / 7 / 7;
+}
+
+/* Footer styles */
+footer {
+  background-color: rgb(21, 20, 20);
+  padding: 20px;
+  text-align: center;
+  overflow: hidden;
+}
+
+.footer-content {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.footer-content p {
+  margin: 0;
+  padding: 10px 0;
+}
+
+.social-media {
+  margin-top: 10px;
+}
+
+.social-media a {
+  color: #333;
+  margin: 0 5px;
+  padding: 5px;
+  font-size: 26px;
+  transition: color 0.3s;
+}
+
+.social-media a:hover {
+  color: #007bff;
+  font-size: 20px;
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
+  .content {
+    margin: 0;
+    padding: 10px;
+    border-radius: 0;
+    background-size: cover;
+
+    background-position: center;
+  }
+
+  .logo {
+    font-size: 25px;
+  }
+
+  nav {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .navbar ul {
+    margin-top: 10px;
+    margin-bottom: 10px;
+  }
+
+  .accbtn {
+    margin-top: 15px;
+
+    margin-bottom: 17px;
+    border-color: aliceblue;
+    background-color: rgb(21, 20, 20);
+  }
+
+  .welcomepage {
+    margin: 80px 0;
+  }
+
+  .welcomepage h1 {
+    font-size: 3rem;
+  }
+
+  .about {
+    margin: 30px 0;
+  }
+
+  .about h2 {
+    margin-bottom: 5px;
+  }
+
+  .about div {
+    padding-left: 0;
+    text-align: center;
+  }
+}
+/* Responsive styles for the quote section */
+@media (max-width: 768px) {
+  .quotes {
+    font-size: 14px;
+    width: 40ch;
+  }
+}
+
+@media (max-width: 480px) {
+  .quotes {
+    /* animation: none; */
+    display: table-row;
+    font-size: 12px;
+    width: 30ch;
+  }
+}
